@@ -16,6 +16,22 @@ function addBook() {
 }
 
 function removeBook(bookId) {
-    listArray = listArray.filter((book) => book.bookId !== bookId);
-    localStorage.setItem('listArray', JSON.stringify(listArray));
-  }
+  listArray = listArray.filter((book) => book.bookId !== bookId);
+  localStorage.setItem('listArray', JSON.stringify(listArray));
+}
+
+function showListOfBooks(book) {
+  const tableRow = document.createElement('tr');
+  const addedTitle = document.createElement('td');
+  const addedAuthor = document.createElement('td');
+  const removeButton = document.createElement('button');
+  addedTitle.innerText = book.titleOfBook;
+  addedAuthor.innerText = book.authorOfBook;
+  removeButton.innerHTML = 'Remove';
+  tableRow.append(addedTitle, addedAuthor, removeButton);
+  listOfBooks.append(tableRow);
+  removeButton.addEventListener('click', () => {
+    tableRow.remove();
+    removeBook(book.bookId);
+  });
+}
