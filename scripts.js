@@ -35,3 +35,24 @@ function showListOfBooks(book) {
     removeBook(book.bookId);
   });
 }
+
+// Show existing books on page load
+listArray.forEach((book) => showListOfBooks(book));
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  if (bookTitle.value === '' || bookAuthor.value === '') {
+    // Instead of alert, show an error message on the page
+    const errorMessage = document.createElement('p');
+    errorMessage.innerText = 'Please fill in all fields';
+    form.appendChild(errorMessage);
+  } else {
+    const addedSuccessfully = addBook();
+    if (addedSuccessfully) {
+      const newBook = listArray[listArray.length - 1];
+      showListOfBooks(newBook);
+      form.reset();
+    }
+  }
+});
