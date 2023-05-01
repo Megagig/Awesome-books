@@ -14,3 +14,8 @@ function addBook() {
   localStorage.setItem('listArray', JSON.stringify(listArray));
   return true; // Return true to indicate book was added successfully
 }
+
+function removeBook(bookId) {
+    listArray = listArray.filter((book) => book.bookId !== bookId);
+    localStorage.setItem('listArray', JSON.stringify(listArray));
+  }
