@@ -31,17 +31,16 @@ table {
   width: 100%;
   min-width: 300px;
 }
+
 th,
 td {
   text-align: left;
   padding: 8px;
 }
+
 th {
   background-color: grey;
   color: white;
-}
-td {
-  border-bottom: 1px solid grey;
 }
 
 tr:nth-child(even) {
@@ -52,15 +51,18 @@ tr:hover {
   background-color: green;
   color: white;
 }
+
 .divider {
   background-color: lightgreen;
   width: 100px;
   height: 2px;
   margin: 0 0 20px;
 }
+
 td {
   height: 40px;
 }
+
 #form {
   display: flex;
   flex-direction: column;
