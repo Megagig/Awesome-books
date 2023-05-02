@@ -26,9 +26,9 @@ class Storage {
   static removeBook(author) {
     const listArray = Storage.getBooks();
 
-    collection.forEach((book, index) => {
+    listArray.forEach((book, index) => {
       if (book.author === author) {
-        collection.splice(index, 1);
+        listArray.splice(index, 1);
       }
     });
 
@@ -36,20 +36,38 @@ class Storage {
   }
 }
 
-function addBook() {
-  const newBook = {
-    titleOfBook: bookTitle.value,
-    authorOfBook: bookAuthor.value,
-    bookId: Math.floor(Math.random() * 1000000),
-  };
-  listArray.push(newBook);
-  localStorage.setItem('listArray', JSON.stringify(listArray));
-  return true; // Return true to indicate book was added successfully
-}
+class Display {
+  static showBooks() {
+    const listArray = Storage.getBooks();
 
-function removeBook(bookId) {
-  listArray = listArray.filter((book) => book.bookId !== bookId);
-  localStorage.setItem('listArray', JSON.stringify(listArray));
+    listArray.forEach((book) => Display.showListOfBooks(book));
+  }
+
+  static showListOfBooks(book) {
+    const listOfBooks = document.getElementById('books-list');
+    const tableRow = document.createElement('tr');
+    const titleAndAuthor = document.createElement('td');
+    const removeButton = document.createElement('td');
+    const button = document.createElement('button');
+    titleAndAuthor.innerHTML = ` <span>"${book.title}"</span> by <span>${book.author}</span> `;
+    tableRow.append(titleAndAuthor);
+    tableRow.append(removeButton);
+    removeButton.append(button);
+    button.classList.add('remove');
+    button.innerText = 'Remove';
+    listOfBooks.appendChild(tableRow);
+  }
+
+  static deleteBook(el) {
+    if (el.classList.contains('remove')) {
+      el.parentElement.parentElement.remove();
+    }
+  }
+
+  static clearFields() {
+    document.querySelector('#title').value = '';
+    document.querySelector('#author').value = '';
+  }
 }
 
 function showListOfBooks(book) {
