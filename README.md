@@ -146,12 +146,12 @@ If you like this project, follow me to see all my projects in the future
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Kudos to [Supreeti Kushwaha](https://github.com/Nedramrez) for her great contribution to this project.
+Kudos to [Zermarden](https://github.com/Nedramrez) for her great contribution to this project.
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/Megagig/Awesome-books/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
