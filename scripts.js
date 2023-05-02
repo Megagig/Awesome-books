@@ -1,8 +1,40 @@
-const form = document.querySelector('#form');
-const bookTitle = document.getElementById('title');
-const bookAuthor = document.getElementById('author');
-const listOfBooks = document.getElementById('books-list');
-let listArray = JSON.parse(localStorage.getItem('listArray')) || [];
+class Book {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
+  }
+}
+
+class Storage {
+  static getBooks() {
+    let listArray;
+    if (localStorage.getItem('listArray') === null) {
+      listArray = [];
+    } else {
+      listArray = JSON.parse(localStorage.getItem('listArray'));
+    }
+
+    return listArray;
+  }
+
+  static addBook(book) {
+    const listArray = Storage.getBooks();
+    listArray.push(book);
+    localStorage.setItem('listArray', JSON.stringify(listArray));
+  }
+
+  static removeBook(author) {
+    const listArray = Storage.getBooks();
+
+    collection.forEach((book, index) => {
+      if (book.author === author) {
+        collection.splice(index, 1);
+      }
+    });
+
+    localStorage.setItem('listArray', JSON.stringify(listArray));
+  }
+}
 
 function addBook() {
   const newBook = {
