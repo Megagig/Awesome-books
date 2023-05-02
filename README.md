@@ -24,7 +24,7 @@
 
 # 📖 [Awesome Books] <a name="about-project"></a>
 
-**[Awesome Books]** is a basic website that allows users to add/remove books to/from a list of books.
+**[Awesome Books]** is a basic website that allows users to add/remove books to/from a list of books. This is a simple website that displays a list of books and allows you to add and remove books from that list. By building this application, I will learn how to manage data using JavaScript. That's why the website will be more interactive. I will also use a medium-fidelity wireframe to build the UI.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -146,12 +146,12 @@ If you like this project, follow me to see all my projects in the future
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Kudos to [Supreeti Kushwaha](https://github.com/Nedramrez) for her great contribution to this project.
+Kudos to [Zermarden](https://github.com/Nedramrez) for her great contribution to this project.
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/Megagig/Awesome-books/blob/main/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
