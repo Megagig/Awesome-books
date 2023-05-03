@@ -110,29 +110,27 @@ this.books.forEach((book, index) => {
   li.appendChild(removeBtn);
   bookList.appendChild(li);
 });
-}
 
 showSection = (sectionId) => {
-// Hide all content sections
-const contentSections = document.querySelectorAll('.content-section');
-contentSections.forEach((section) => {
-  section.classList.add('hidden');
-});
+  // Hide all content sections
+  const contentSections = document.querySelectorAll('.content-section');
+  contentSections.forEach((section) => {
+    section.classList.add('hidden');
+  });
 
-// Show the selected content section
-const selectedSection = document.getElementById(sectionId);
-selectedSection.classList.remove('hidden');
+  // Show the selected content section
+  const selectedSection = document.getElementById(sectionId);
+  selectedSection.classList.remove('hidden');
 };
-}
 
 const bookList = new BookList();
 bookList.init();
 
 function updateDateTime() {
-const now = new Date();
-const date = now.toLocaleDateString();
-const time = now.toLocaleTimeString();
-document.getElementById('datetime').innerHTML = `${date} ${time}`;
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+  document.getElementById('datetime').innerHTML = `${date} ${time}`;
 }
 
 // Call updateDateTime function every second to update the time
