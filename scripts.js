@@ -90,3 +90,15 @@ document.querySelector('#books-list').addEventListener('click', (e) => {
 
   Storage.removeBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
 });
+
+class BookList {
+  constructor() {
+    // Array to hold the list of books
+    this.books = JSON.parse(localStorage.getItem('books')) || [];
+
+    // Get the error elements for author and title
+    this.errorElements = {
+      author: document.getElementById('authorError'),
+      title: document.getElementById('titleError'),
+    };
+  }
