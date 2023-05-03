@@ -15,7 +15,6 @@ body {
 main {
   width: 90%;
   margin: 5%;
-
 }
 
 a {
@@ -42,7 +41,8 @@ tr {
 table {
   border-collapse: collapse;
   width: 100%;
-/*   min-width: 300px; */
+
+  /*   min-width: 300px; */
 }
 
 th,
@@ -110,7 +110,6 @@ nav ul {
   border-width: 2px;
   padding: 10px;
   width: 100%;
-
 }
 
 .content-section ul li {
@@ -162,10 +161,6 @@ nav ul a:active {
   color: rgb(106, 106, 106);
 }
 
-#book-list {
-  width: 100%;
-}
-
 #book-list h1 {
   align-items: center;
 }
@@ -193,6 +188,7 @@ button {
   font-weight: 400;
   font-size: 1.1rem;
 }
+
 .active {
   color: #0062cc;
 }
@@ -201,7 +197,7 @@ button {
   display: none;
 }
 
-#contact-info ul{
+#contact-info ul {
   padding-left: 2%;
 }
 
@@ -220,7 +216,7 @@ footer {
   justify-content: center;
   align-self: flex-end;
   margin-right: 5%;
-  padding-top: 10px
+  padding-top: 10px;
 }
 
 #current-time p {
