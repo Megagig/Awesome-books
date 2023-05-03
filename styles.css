@@ -125,3 +125,63 @@ nav ul a {
 nav ul a:active {
   font-weight: bolder;
 }
+
+.hidden-section {
+  width: 70%;
+  margin: 2rem auto 0;
+  color: rgb(106, 106, 106);
+}
+
+.hidden-section h2 {
+  text-align: center;
+  color: #0062cc;
+}
+
+.hidden-section h3 {
+  margin: 1.5rem 0 3rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+.active {
+  color: #0062cc;
+}
+.file {
+  display: none;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(106, 106, 106);
+  color: #fff;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+#current-time {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+
+#current-time p {
+  color: rgb(106, 106, 106);
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav > a {
+    display: none;
+  }
+
+  form {
+    width: 90%;
+  }
+}
