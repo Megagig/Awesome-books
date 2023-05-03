@@ -12,8 +12,20 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+main {
+  width: 90%;
+  margin: 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
 h1 {
   padding-bottom: 30px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
 h2 {
@@ -29,7 +41,8 @@ tr {
 table {
   border-collapse: collapse;
   width: 100%;
-  min-width: 300px;
+
+  /*   min-width: 300px; */
 }
 
 th,
@@ -52,20 +65,15 @@ tr:hover {
   color: white;
 }
 
-.divider {
-  background-color: lightgreen;
-  width: 100px;
-  height: 2px;
-  margin: 0 0 20px;
-}
-
 td {
   height: 40px;
 }
 
-#form {
+form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #submit {
@@ -83,4 +91,149 @@ td {
 
 #submit:focus {
   outline: none;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: self-end;
+  gap: 1rem;
+}
+
+#book-list ul {
+  max-width: 30rem;
+  margin: 1rem auto 0;
+}
+
+#book-list {
+  border: solid rgb(106, 106, 106);
+  border-width: 2px;
+  padding: 10px;
+  width: 100%;
+}
+
+.content-section ul li {
+  font-weight: 400;
+  font-size: 0.97rem;
+  list-style: circle;
+}
+
+.contact {
+  width: 90%;
+  margin: 5%;
+}
+
+/* NAVIGATION */
+nav {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid rgb(106, 106, 106);
+  border-radius: 0.3rem;
+  width: 90%;
+  margin: 1rem auto 0;
+}
+
+nav > a {
+  color: rgb(106, 106, 106);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+nav ul a {
+  font-weight: 700;
+  color: rgb(106, 106, 106);
+  text-decoration: none;
+}
+
+nav ul a:active {
+  font-weight: bolder;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 2rem auto 0;
+  color: rgb(106, 106, 106);
+}
+
+#book-list h1 {
+  align-items: center;
+}
+
+#book-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+}
+
+button {
+  margin: 5px 20px;
+  color: red;
+}
+
+.content-section h2 {
+  text-align: center;
+  color: #0062cc;
+}
+
+.content-section h3 {
+  margin: 1.5rem 0 3rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.active {
+  color: #0062cc;
+}
+
+.hidden {
+  display: none;
+}
+
+#contact-info ul {
+  padding-left: 2%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(106, 106, 106);
+  color: #fff;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+#current-time {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  margin-right: 5%;
+  padding-top: 10px;
+}
+
+#current-time p {
+  color: rgb(106, 106, 106);
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav > a {
+    display: none;
+  }
+
+  form {
+    width: 90%;
+  }
 }
