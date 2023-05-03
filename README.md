@@ -62,7 +62,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://megagig.github.io/Awesome-books/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +85,7 @@ Example commands:
 ```sh
   cd my-folder
 
-  git clone git@github.com:myaccount/my-project.git
+  https://github.com/Megagig/Awesome-books.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
