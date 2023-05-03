@@ -92,7 +92,12 @@ nav ul {
   gap: 1rem;
 }
 
-.hidden-section ul li {
+#book-list ul {
+  max-width: 30rem;
+  width: 50%;
+  margin: 1rem auto 0;
+}
+.content-section ul li {
   font-weight: 400;
   font-size: 0.97rem;
   list-style: circle;
@@ -126,18 +131,18 @@ nav ul a:active {
   font-weight: bolder;
 }
 
-.hidden-section {
+.content-section {
   width: 70%;
   margin: 2rem auto 0;
   color: rgb(106, 106, 106);
 }
 
-.hidden-section h2 {
+.content-section h2 {
   text-align: center;
   color: #0062cc;
 }
 
-.hidden-section h3 {
+.content-section h3 {
   margin: 1.5rem 0 3rem;
   font-weight: 400;
   font-size: 1.1rem;
@@ -145,7 +150,7 @@ nav ul a:active {
 .active {
   color: #0062cc;
 }
-.file {
+.hidden {
   display: none;
 }
 
