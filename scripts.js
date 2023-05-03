@@ -88,17 +88,52 @@ document.querySelector('#form').addEventListener('submit', (e) => {
 document.querySelector('#books-list').addEventListener('click', (e) => {
   Display.deleteBook(e.target);
 
-  Storage.removeBook(e.target.parentElement.previousElementSibling.lastElementChild.textContent);
+  Storage.removeBook(
+    e.target.parentElement.previousElementSibling.lastElementChild.textContent
+  );
 });
 
-class BookList {
-  constructor() {
-    // Array to hold the list of books
-    this.books = JSON.parse(localStorage.getItem('books')) || [];
+// Header for list books page
+const h1 = document.createElement('h1');
+h1.textContent = 'All Awesome Books';
+bookList.appendChild(h1);
 
-    // Get the error elements for author and title
-    this.errorElements = {
-      author: document.getElementById('authorError'),
-      title: document.getElementById('titleError'),
-    };
-  }
+this.books.forEach((book, index) => {
+  const li = document.createElement('li');
+  li.textContent = `${book.title} by ${book.author}`;
+  const removeBtn = document.createElement('button');
+  removeBtn.textContent = 'Remove';
+  removeBtn.addEventListener('click', () => {
+    this.removeBook(index);
+    this.renderBookList();
+  });
+  li.appendChild(removeBtn);
+  bookList.appendChild(li);
+});
+}
+
+showSection = (sectionId) => {
+// Hide all content sections
+const contentSections = document.querySelectorAll('.content-section');
+contentSections.forEach((section) => {
+  section.classList.add('hidden');
+});
+
+// Show the selected content section
+const selectedSection = document.getElementById(sectionId);
+selectedSection.classList.remove('hidden');
+};
+}
+
+const bookList = new BookList();
+bookList.init();
+
+function updateDateTime() {
+const now = new Date();
+const date = now.toLocaleDateString();
+const time = now.toLocaleTimeString();
+document.getElementById('datetime').innerHTML = `${date} ${time}`;
+}
+
+// Call updateDateTime function every second to update the time
+setInterval(updateDateTime, 1000);
